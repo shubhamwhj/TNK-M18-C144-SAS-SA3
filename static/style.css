@@ -1,0 +1,185 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    /* overflow: hidden; Prevents horizontal scrollbar */
+    background-image: url('bg.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+h1 {
+    color: #343a40;
+    text-align: center;
+    margin-bottom: 20px;
+    width: 100%;
+}
+h2 {
+    color:aqua;
+    text-align: center;
+    background-color: black;
+    border-radius: 20px;
+    padding:2%;
+}
+h4 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}    
+
+#room{
+transition: background-image 0.5s ease-in-out;
+}
+
+#fan{
+    transition: opacity 0.5s ease-in-out;
+}
+.btn{
+    margin: 10px;
+}
+
+.ratio-container{
+  position: relative;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+.ratio-container::before {
+  content: "";
+  display: block;
+  padding-bottom: 40%; /* Adjust this percentage for your desired aspect ratio (e.g., 4:3) */
+
+}
+
+.ratio-content{
+  position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+}
+
+.content-img {
+  position: absolute;
+  width: 15.3%; /* Adjust the width as needed */
+  height: 39%; /* Maintain the aspect ratio */
+  border: 0px solid #343a40;
+  box-shadow: #343a40;
+  top: 25.9%;
+}
+
+#content-img1 {
+  left: 34.5%;
+}
+
+#content-img2 {
+  left: 49.95%;
+}
+
+#content-img3 {
+  left: 65.4%;
+}
+
+
+  #stats {
+    width: 80%;
+    background-image: url('box.png');
+    background-position: center center;
+    background-size: calc(100% + 25px) calc(100% + 25px);
+    /* background-color: #fff; */
+    border-radius: 5px;
+    padding: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin: auto;
+    margin-top: 10px;
+    height: auto;
+    box-sizing: border-box;
+    color: #94fffa
+}
+
+#stats p {
+    margin-bottom: 10px;
+}
+
+#stats span {
+    font-weight: bold;
+}
+
+
+
+
+/*  */
+progress{
+  /* Reset the default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+/* hides Firefox progress fill bar */
+::-moz-progress-bar {
+  visibility: hidden;
+}
+
+/* hides Edge progress fill bar */
+::-ms-fill {
+  display: none;
+}
+/* hides all pseudo elements on Webkit*/
+::-webkit-progress-inner-element, ::-webkit-progress-bar, ::-webkit-progress-value{
+  display:none;
+}
+
+.doughnut{
+  position:relative;
+  width: 100px;
+  height: 100px;
+  text-align: center;
+}
+
+.doughnut progress{
+  width:100%; height:100%;
+  border:0;
+  border-radius:50%;
+  background: conic-gradient(#28fff4 40%, rgb(255, 253, 253) 0);
+}  
+
+/* Since Edge 17 doesn't support masking, we go for a white overlay */
+.doughnut::before{
+  content:attr(data-value);
+  position:absolute; 
+  background: #172a3d;
+  border-radius: 50%;
+  top:8px; right:8px; bottom:8px; left:8px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-weight:700;
+}
+#stats{
+    font-family: sans-serif;
+    display:grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-gap:20px;
+  }
+
+#stats .btn-primary{
+  background-image: url('button.png');
+  background-position: center center;
+  background-size: calc(100% + 20px) calc(100% + 20px);
+  background-color: transparent;
+  color: transparent;
+}
